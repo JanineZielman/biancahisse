@@ -2,12 +2,12 @@ import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
-import { createClient } from "../prismicio";
-import { components } from "../slices";
-import { Layout } from "../components/Layout";
+import { createClient } from "../../prismicio";
+import { components } from "../../slices";
+import { Layout } from "../../components/Layout";
 import Moment from 'moment';
 
-const Page = ({ navigation, settings, page }) => {
+const Project = ({ navigation, settings, page }) => {
   return (
     <Layout
       navigation={navigation}
@@ -24,19 +24,19 @@ const Page = ({ navigation, settings, page }) => {
         <meta property="og:image" content={settings.data.image.url} />
       </Head>
       {/* <h2 className="page-title">{prismicH.asText(page.data.title)}</h2> */}
-      <div className={`container page`}>
+      <div className={`container project-page`}>
         <SliceZone slices={page.data.slices} components={components} />
       </div>
     </Layout>
   );
 };
 
-export default Page;
+export default Project;
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const page = await client.getByUID("page", params.uid);
+  const page = await client.getByUID("project", params.uid);
   const navigation = await client.getSingle("menu");
   const settings = await client.getSingle("settings");
 
@@ -52,7 +52,7 @@ export async function getStaticProps({ params, previewData }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const pages = await client.getAllByType("page");
+  const pages = await client.getAllByType("project");
 
   return {
     paths: pages.map((page) => {

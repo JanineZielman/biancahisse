@@ -1,0 +1,21 @@
+{
+  "_cts": {
+    "menu": {},
+    "settings": {},
+    "project": {
+      "main_image": {}
+    }
+  },
+  "slices": {
+    "Text": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

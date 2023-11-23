@@ -1,0 +1,39 @@
+{
+  "site_title": {
+    "__TYPE__": "FieldContent",
+    "value": "electricity",
+    "type": "Text"
+  },
+  "site_description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Quis nisi dolore qui fugiat eiusmod ut ex occaecat fugiat cupidatat eu nostrud. In cupidatat officia anim velit pariatur magna."
+        }
+      }
+    ]
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+      "width": 4000,
+      "height": 6000
+    },
+    "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?rect=0%2C1875%2C4000%2C2250&w=1920&h=1080",
+    "width": 1920,
+    "height": 1080,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 1875
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  }
+}
