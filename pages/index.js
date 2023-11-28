@@ -8,7 +8,6 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 const Index = ({settings, navigation, page, projects  }) => {
-  console.log(projects)
   return (
     <Layout
       navigation={navigation}

@@ -1,4 +1,63 @@
 @media only screen and (max-width: 600px) {
- 
-  
+  header.menu h1{
+    font-size: 16px;
+  }
+  header.menu .menu-items a{
+    font-size: 16px;
+    padding: 5px;
+  }
+  .projects{
+    .project{
+      .info-wrapper{
+        width: 100%;
+      }
+      img{
+        width: 90%;
+        left: 50%;
+        right: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover{
+        .info-wrapper{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .project-page .main-image{
+    flex-direction: column;
+    img{
+      padding: 0;
+      padding-bottom: 10px;
+    }
+    &.columns2{
+      img{
+        width: 100%;
+        height: 45vh;
+        min-height: 45vh;
+      }
+    }
+    &.columns3{
+      img{
+        width: 100%;
+        height: 30vh;
+        min-height: 30vh;
+      }
+    }
+  }
+  .text-section{
+    margin-left: 0;
+  }
+  .image-section{
+    img{
+      padding: 5px 0;
+    }
+    &.small-33{
+      width: 100%;
+    }
+    &.medium-50{
+      width: 100%;
+    }
+  }
 }

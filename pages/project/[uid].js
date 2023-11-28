@@ -6,6 +6,7 @@ import { createClient } from "../../prismicio";
 import { components } from "../../slices";
 import { Layout } from "../../components/Layout";
 import Moment from 'moment';
+import { PrismicNextImage } from "@prismicio/next";
 
 const Project = ({ navigation, settings, page }) => {
   return (
@@ -23,8 +24,18 @@ const Project = ({ navigation, settings, page }) => {
         <meta property="og:description" content={settings.data.site_description[0].text} />
         <meta property="og:image" content={settings.data.image.url} />
       </Head>
-      {/* <h2 className="page-title">{prismicH.asText(page.data.title)}</h2> */}
       <div className={`container project-page`}>
+        <div className="fixed-info-bar">
+          <div className="project-title">{page.data.title}</div>
+          <div className="year">{page.data.year}</div>
+        </div>
+        <div className={`main-image columns${page.data.main_image.length}`}>
+          {page.data.main_image.map((item, i) => {
+            return(
+              <PrismicNextImage field={item.image}/>
+            )
+          })}
+        </div>
         <SliceZone slices={page.data.slices} components={components} />
       </div>
     </Layout>

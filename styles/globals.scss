@@ -44,7 +44,9 @@ header.menu{
 }
 
 .container{
-  padding: 28px 14px;
+  width: 95%;
+  margin-left: 2.5%;
+  padding: 28px 0px;
 }
 
 .projects{
@@ -112,5 +114,81 @@ header.menu{
         width: 45%;
       }
     }
+  }
+}
+
+
+.project-page{
+  padding-bottom: 48px;
+  .fixed-info-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: capitalize;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 14px 28px;
+    font-size: $h3;
+    &:after{
+      content: "";
+      height: 60px;
+      width: 100vw;
+      background-color: $highlight;
+      position: absolute;
+      z-index: -1;
+      left: 0px;
+      bottom: 0;
+      filter: blur(10px);
+      border-radius: 25px;
+      transition: all 0.4s ease;
+    }
+  }
+  .main-image{
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    width: 100%;
+    &.columns2{
+      img{
+        width: 50%;
+      }
+    }
+    &.columns3{
+      img{
+        width: 33%;
+      }
+    }
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      min-height: 90vh;
+      max-height: 90vh;
+      padding: 0 10px;
+    }
+  }
+}
+
+.text-section{
+  margin-top: 48px;
+  margin-bottom: 48px;
+  max-width: 900px;
+  margin-left: 10px;
+}
+
+.image-section{
+  display: inline-block;
+  vertical-align: middle;
+  img{
+    width: 100%;
+    height: auto;
+    padding: 14px;
+  }
+  &.small-33{
+    width: 33%;
+  }
+  &.medium-50{
+    width: 50%;
   }
 }
