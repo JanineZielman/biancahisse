@@ -5,6 +5,7 @@ export const Layout = ({
   navigation,
   settings,
   children,
+  background_color
 }) => {
   return (
     <>
@@ -12,8 +13,9 @@ export const Layout = ({
         alternateLanguages={alternateLanguages}
         navigation={navigation}
         settings={settings}
+        background_color={background_color ? background_color : settings.data.background_color}
       />
-      <main>
+      <main style={{'backgroundColor': settings.data.background_color}}>
         {children}
       </main>
     </>

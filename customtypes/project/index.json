@@ -19,6 +19,27 @@
           "placeholder": ""
         }
       },
+      "year": {
+        "type": "Text",
+        "config": {
+          "label": "Year",
+          "placeholder": ""
+        }
+      },
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Date",
+          "placeholder": ""
+        }
+      },
+      "background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Background Color",
+          "placeholder": ""
+        }
+      },
       "cover_image": {
         "type": "Image",
         "config": {
@@ -45,13 +66,6 @@
               }
             }
           }
-        }
-      },
-      "year": {
-        "type": "Text",
-        "config": {
-          "label": "Year",
-          "placeholder": ""
         }
       },
       "slices": {

@@ -11,6 +11,7 @@ const Image = ({ slice }) => {
   return(
     <section className={`image-section ${slice.primary.size}`}>
       <PrismicNextImage field={slice.primary.image}/>
+      <PrismicRichText className="caption" field={slice.primary.caption}/>
     </section>
   )
 }

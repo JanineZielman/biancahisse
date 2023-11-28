@@ -93,6 +93,39 @@ interface ProjectDocumentData {
 	title: prismic.KeyTextField;
 	
 	/**
+	 * Year field in *Project*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.year
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	year: prismic.KeyTextField;
+	
+	/**
+	 * Date field in *Project*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.date
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#date
+	 */
+	date: prismic.DateField;
+	
+	/**
+	 * Background Color field in *Project*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.background_color
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	background_color: prismic.ColorField;
+	
+	/**
 	 * Cover Image field in *Project*
 	 *
 	 * - **Field Type**: Image
@@ -113,17 +146,6 @@ interface ProjectDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	main_image: prismic.GroupField<Simplify<ProjectDocumentDataMainImageItem>>;
-	
-	/**
-	 * Year field in *Project*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: project.year
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	year: prismic.KeyTextField;
 	
 	/**
 	 * Slice Zone field in *Project*
@@ -184,6 +206,17 @@ interface SettingsDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
+	
+	/**
+	 * Background Color field in *Settings*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: settings.background_color
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	background_color: prismic.ColorField;
 }
 
 /**
@@ -222,6 +255,16 @@ export interface ImageSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
 	size: prismic.SelectField<"small-33" | "medium-50" | "large-100">;
+	
+	/**
+	 * Caption field in *Image → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image.primary.caption
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	caption: prismic.RichTextField;
 }
 
 /**

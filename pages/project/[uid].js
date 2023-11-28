@@ -13,6 +13,7 @@ const Project = ({ navigation, settings, page }) => {
     <Layout
       navigation={navigation}
       settings={settings}
+      background_color = {page.data.background_color}
     >
       <Head>
         <title>
@@ -24,7 +25,7 @@ const Project = ({ navigation, settings, page }) => {
         <meta property="og:description" content={settings.data.site_description[0].text} />
         <meta property="og:image" content={settings.data.image.url} />
       </Head>
-      <div className={`container project-page`}>
+      <div className={`container project-page`} style={{'backgroundColor': page.data.background_color}}>
         <div className="fixed-info-bar">
           <div className="project-title">{page.data.title}</div>
           <div className="year">{page.data.year}</div>

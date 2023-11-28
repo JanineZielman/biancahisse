@@ -19,12 +19,20 @@ body{
   font-size: $body;
   font-family: "Monument";
   background-color: $background;
+  margin: 0;
+}
+
+main{
+  min-height: 100vh;
 }
 
 header.menu{
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  padding: 5px 0;
   a{
     color: black;
     text-decoration: none;
@@ -44,9 +52,8 @@ header.menu{
 }
 
 .container{
-  width: 95%;
-  margin-left: 2.5%;
-  padding: 28px 0px;
+  width: 100%;
+  padding: 48px 2.5%;
 }
 
 .projects{
@@ -180,10 +187,13 @@ header.menu{
 .image-section{
   display: inline-block;
   vertical-align: middle;
+  padding: 14px;
   img{
     width: 100%;
     height: auto;
-    padding: 14px;
+  }
+  p{
+    margin: 5px 0 0 0;
   }
   &.small-33{
     width: 33%;

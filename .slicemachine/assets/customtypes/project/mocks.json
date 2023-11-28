@@ -1,24 +1,39 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "standard"
+    "value": "carbon"
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "now",
+    "value": "border",
     "type": "Text"
+  },
+  "year": {
+    "__TYPE__": "FieldContent",
+    "value": "sit",
+    "type": "Text"
+  },
+  "date": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2014-12-16"
+  },
+  "background_color": {
+    "__TYPE__": "FieldContent",
+    "value": "#f4cef8",
+    "type": "Color"
   },
   "cover_image": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
-      "width": 3456,
-      "height": 3456
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+      "width": 2747,
+      "height": 4120
     },
-    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?rect=0%2C0%2C3456%2C3456&w=1080&h=1080",
+    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?rect=0%2C0%2C2747%2C4120&w=1080&h=1620",
     "width": 1080,
-    "height": 1080,
+    "height": 1620,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -41,13 +56,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-                "width": 5243,
-                "height": 3495
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+                "width": 3168,
+                "height": 4752
               },
-              "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?rect=0%2C0%2C5243%2C3495&w=1080&h=720",
+              "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?rect=0%2C0%2C3168%2C4752&w=1080&h=1620",
               "width": 1080,
-              "height": 720,
+              "height": 1620,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -63,16 +78,11 @@
       }
     ]
   },
-  "year": {
-    "__TYPE__": "FieldContent",
-    "value": "newspaper",
-    "type": "Text"
-  },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "image$d997d562-7374-40fd-bbf1-757161617aa0",
+        "key": "image$2efc39d2-fc2f-448a-89e2-e7a45faee6af",
         "name": "image",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -82,18 +92,18 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
-                "width": 3024,
-                "height": 3778
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+                "width": 4172,
+                "height": 4000
               },
-              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C0%2C3024%2C3777&w=1080&h=1349",
+              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?rect=0%2C1%2C4172%2C3998&w=1080&h=1035",
               "width": 1080,
-              "height": 1349,
+              "height": 1035,
               "edit": {
                 "zoom": 1,
                 "crop": {
                   "x": 0,
-                  "y": 0
+                  "y": 1
                 },
                 "background": "transparent"
               },
@@ -101,7 +111,7 @@
             },
             "size": {
               "__TYPE__": "FieldContent",
-              "value": "medium-50",
+              "value": "large-100",
               "type": "Select"
             }
           },
@@ -114,7 +124,7 @@
         }
       },
       {
-        "key": "text$db7c610a-6c3e-45cf-ad89-02820790c86f",
+        "key": "text$dfd2683c-87af-4123-bbd8-44b6592a29ee",
         "name": "text",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -126,7 +136,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Sunt cupidatat quis esse veniam ad adipisicing occaecat reprehenderit."
+                    "text": "Officia laboris proident excepteur consectetur eu pariatur do aliqua ut mollit magna est veniam anim ipsum. Ullamco excepteur ex mollit reprehenderit id cupidatat sunt occaecat velit."
                   }
                 }
               ]

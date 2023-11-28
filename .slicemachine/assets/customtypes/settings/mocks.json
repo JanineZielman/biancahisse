@@ -1,7 +1,7 @@
 {
   "site_title": {
     "__TYPE__": "FieldContent",
-    "value": "electricity",
+    "value": "wheat",
     "type": "Text"
   },
   "site_description": {
@@ -10,7 +10,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Quis nisi dolore qui fugiat eiusmod ut ex occaecat fugiat cupidatat eu nostrud. In cupidatat officia anim velit pariatur magna."
+          "text": "Eu ex non enim aliquip qui do exercitation consequat quis minim dolor dolore consectetur."
         }
       }
     ]
@@ -19,21 +19,26 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-      "width": 4000,
-      "height": 6000
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+      "width": 4016,
+      "height": 6016
     },
-    "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?rect=0%2C1875%2C4000%2C2250&w=1920&h=1080",
+    "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?rect=0%2C1879%2C4016%2C2259&w=1920&h=1080",
     "width": 1920,
     "height": 1080,
     "edit": {
       "zoom": 1,
       "crop": {
         "x": 0,
-        "y": 1875
+        "y": 1879
       },
       "background": "transparent"
     },
     "thumbnails": {}
+  },
+  "background_color": {
+    "__TYPE__": "FieldContent",
+    "value": "#247f34",
+    "type": "Color"
   }
 }

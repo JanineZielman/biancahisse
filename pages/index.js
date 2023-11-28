@@ -7,7 +7,7 @@ import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
-const Index = ({settings, navigation, page, projects  }) => {
+const Index = ({settings, navigation, projects  }) => {
   return (
     <Layout
       navigation={navigation}
@@ -47,15 +47,18 @@ export async function getStaticProps({ previewData }) {
 
   const navigation = await client.getSingle("menu");
   const settings = await client.getSingle("settings");
-  const page = await client.getByUID("page", "home");
-  const projects = await client.getAllByType("project");
+  const projects = await client.getAllByType("project", { 
+    orderings: {
+			field: 'my.project.date',
+			direction: 'desc',
+		}
+  });
 
 
   return {
     props: {
       navigation,
       settings,
-      page,
       projects
     },
   };
