@@ -64,19 +64,32 @@ header.menu{
     width: 100%;
     color: black;
     text-decoration: none;
+    position: relative;
+    .bg{
+      width: 105%;
+      background-color: $highlight;
+      filter: blur(10px);
+      position: absolute;
+      top: 0;
+      left: -2.5%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+    }
     .info-wrapper{
       display: flex;
       justify-content: space-between;
       width: 45%;
       transition: all 0.4s ease-in-out;
+      z-index: 1;
     }
     img{
       width: 45%;
       height: auto;
-      position: absolute;
+      position: fixed;
       right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 50px;
       transition: all 0.4s ease-in-out;
       z-index: 5;
       visibility: hidden;
@@ -91,22 +104,9 @@ header.menu{
       opacity: 0;
       transition: all 0.4s ease-in-out;
     }
-    &:after{
-      content: "";
-      height: 45px;
-      width: 100vw;
-      background-color: $highlight;
-      position: absolute;
-      z-index: -1;
-      left: 0px;
-      margin-top: -8px;
-      filter: blur(10px);
-      border-radius: 25px;
-      opacity: 0;
-      transition: all 0.4s ease;
-    }
+  
     &:hover{
-      &:after{
+      .bg{
         opacity: 1;
       }
       img{
