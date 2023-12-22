@@ -6,16 +6,8 @@ import { Layout } from "../components/Layout";
 import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import Slider from "react-slick";
 
 const Index = ({settings, navigation, projects  }) => {
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
   return (
     <Layout
       navigation={navigation}
@@ -29,21 +21,21 @@ const Index = ({settings, navigation, projects  }) => {
         <meta property="og:description" content={settings.data.site_description[0].text} />
         <meta property="og:image" content={settings.data.image.url} />
       </Head>
-      <div className="home-slider">
-        <Slider {...sliderSettings}>
+      <div className="container">
+        <div className="projects">
           {projects.map((item, i) => {
-              return(
-                <div className="project-slide" key={`project${i}`}>
-                  <div className="bg"></div>
-                  <Link href={`/project/${item.uid}`} className="info-wrapper">
-                    <div className="project-title">{item.data.title}</div>
-                    <div className="year">{item.data.year}</div>
-                  </Link>
-                  <PrismicNextImage field={item.data.cover_image}/>
+            return(
+              <Link href={`/project/${item.uid}`} className="project" key={`project${i}`}>
+                <div className="bg"></div>
+                <div className="info-wrapper">
+                  <div className="project-title">{item.data.title}</div>
+                  <div className="year">{item.data.year}</div>
                 </div>
-              )
-            })}
-        </Slider>
+                <PrismicNextImage field={item.data.cover_image}/>
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   );

@@ -3,6 +3,12 @@
   src: url("./ABCMonumentGroteskSemi-Mono-Regular.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Monument-Med";
+  src: url("./MonumentGrotesk-Medium.woff2") format("woff2");
+}
+
+
 $h1: 48px;
 $h2: 28px;
 $h3: 22px;
@@ -20,6 +26,8 @@ body{
   font-family: "Monument";
   background-color: $background;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 main{
@@ -32,14 +40,16 @@ header.menu{
   text-transform: uppercase;
   position: fixed;
   width: 100%;
-  padding: 5px 0;
+  padding: 10px 24px;
+  font-family: "Monument-Med";
+  background-color: transparent;
+  z-index: 999;
   a{
     color: black;
     text-decoration: none;
   }
   h1{
     margin: 0;
-    padding: 0 14px;
     font-size: $h2;
     font-weight: 300;
   }
@@ -53,10 +63,11 @@ header.menu{
 
 .container{
   width: 100%;
-  padding: 48px 2.5%;
+  padding: 48px 24px;
 }
 
 .projects{
+  margin-top: 24px;
   .project{
     display: flex;
     justify-content: space-between;
@@ -200,5 +211,55 @@ header.menu{
   }
   &.medium-50{
     width: 50%;
+  }
+}
+
+.home-slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slick-slide{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  .project-slide{
+    width: 100vw;
+    height: 100vh;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+    }
+  }
+  .info-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+    position: fixed;
+    bottom: 60px;
+    text-decoration: none;
+    color: black;
+    font-size: $h3;
+    padding: 0 24px;
+    font-size: $h3;
+    text-transform: capitalize;
+  }
+  .bg{
+    width: 100%;
+    background-color: $highlight;
+    filter: blur(10px);
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    height: 30px;
+    z-index: 0;
   }
 }
