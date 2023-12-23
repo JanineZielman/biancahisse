@@ -29,6 +29,9 @@ export const linkResolver = (doc) => {
   if (doc.type === "project") {
     return `/project/${doc.uid}`;
   }
+  if (doc.type === "works") {
+    return `/works`;
+  }
   return `/`;
 };
 

@@ -230,7 +230,34 @@ interface SettingsDocumentData {
  */
 export type SettingsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
 
-export type AllDocumentTypes = MenuDocument | PageDocument | ProjectDocument | SettingsDocument;
+/**
+ * Content for Works documents
+ */
+interface WorksDocumentData {
+	/**
+	 * Title field in *Works*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
+}
+
+/**
+ * Works document from Prismic
+ *
+ * - **API ID**: `works`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type WorksDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<WorksDocumentData>, "works", Lang>;
+
+export type AllDocumentTypes = MenuDocument | PageDocument | ProjectDocument | SettingsDocument | WorksDocument;
 
 /**
  * Primary content in *Image → Primary*
@@ -346,6 +373,8 @@ declare module "@prismicio/client" {
 			ProjectDocumentDataSlicesSlice,
 			SettingsDocument,
 			SettingsDocumentData,
+			WorksDocument,
+			WorksDocumentData,
 			AllDocumentTypes,
 			ImageSlice,
 			ImageSliceDefaultPrimary,

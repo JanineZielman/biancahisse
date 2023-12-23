@@ -11,10 +11,15 @@ import Slider from "react-slick";
 const Index = ({settings, navigation, projects  }) => {
   const sliderSettings = {
     dots: false,
+    arrows: true,
+    fade: true,
+    cssEase: 'linear',
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
   return (
     <Layout

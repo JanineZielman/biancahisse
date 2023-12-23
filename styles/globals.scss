@@ -21,6 +21,10 @@ $background: #E8DEDB;
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 body{
   font-size: $body;
   font-family: "Monument";
@@ -42,11 +46,11 @@ header.menu{
   width: 100%;
   padding: 10px 24px;
   font-family: "Monument-Med";
-  background-color: transparent;
   z-index: 999;
   a{
     color: black;
     text-decoration: none;
+    
   }
   h1{
     margin: 0;
@@ -261,5 +265,27 @@ header.menu{
     left: 0;
     height: 30px;
     z-index: 0;
+  }
+}
+
+.slick-next{
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  left: auto;
+  z-index: 9;
+  &:before{
+    color: black;
+  }
+}
+
+.slick-prev{
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  right: auto;
+  z-index: 9;
+  &:before{
+    color: black;
   }
 }
