@@ -258,6 +258,21 @@ interface SettingsDocumentData {
 export type SettingsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
 
 /**
+ * Item in *Works → Projects*
+ */
+export interface WorksDocumentDataProjectsItem {
+	/**
+	 * Project field in *Works → Projects*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.projects[].project
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	project: prismic.ContentRelationshipField<"project">;
+}
+
+/**
  * Content for Works documents
  */
 interface WorksDocumentData {
@@ -271,6 +286,17 @@ interface WorksDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField;
+	
+	/**
+	 * Projects field in *Works*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.projects[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	projects: prismic.GroupField<Simplify<WorksDocumentDataProjectsItem>>;
 }
 
 /**
@@ -544,6 +570,7 @@ declare module "@prismicio/client" {
 			SettingsDocumentData,
 			WorksDocument,
 			WorksDocumentData,
+			WorksDocumentDataProjectsItem,
 			AllDocumentTypes,
 			ImageSlice,
 			ImageSliceDefaultPrimary,

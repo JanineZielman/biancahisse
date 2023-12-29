@@ -1,11 +1,31 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "courage"
+    "value": "bright"
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "operation",
+    "value": "anything",
     "type": "Text"
+  },
+  "projects": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "project",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
+      }
+    ]
   }
 }

@@ -8,6 +8,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 const Index = ({settings, navigation, projects  }) => {
+  console.log(projects)
   return (
     <Layout
       navigation={navigation}
@@ -23,15 +24,15 @@ const Index = ({settings, navigation, projects  }) => {
       </Head>
       <div className="container">
         <div className="projects">
-          {projects.map((item, i) => {
+          {projects.data.projects.map((item, i) => {
             return(
-              <Link href={`/project/${item.uid}`} className="project" key={`project${i}`}>
+              <Link href={`/project/${item.project.uid}`} className="project" key={`project${i}`}>
                 <div className="bg"></div>
                 <div className="info-wrapper">
-                  <div className="project-title">{item.data.title}</div>
-                  <div className="year">{item.data.year}</div>
+                  <div className="project-title">{item.project.data.title}</div>
+                  <div className="year">{item.project.data.year}</div>
                 </div>
-                <PrismicNextImage field={item.data.cover_image}/>
+                <PrismicNextImage field={item.project.data.cover_image}/>
               </Link>
             )
           })}
@@ -48,11 +49,8 @@ export async function getStaticProps({ previewData }) {
 
   const navigation = await client.getSingle("menu");
   const settings = await client.getSingle("settings");
-  const projects = await client.getAllByType("project", { 
-    orderings: {
-			field: 'my.project.date',
-			direction: 'desc',
-		}
+  const projects = await client.getSingle("works", {
+    fetchLinks: `project.title, project.year, project.cover_image`
   });
 
 

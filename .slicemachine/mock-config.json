@@ -5,7 +5,9 @@
     "project": {
       "main_image": {}
     },
-    "works": {},
+    "works": {
+      "projects": {}
+    },
     "page": {}
   },
   "slices": {
