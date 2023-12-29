@@ -36,15 +36,15 @@ const Index = ({settings, navigation, projects  }) => {
       </Head>
       <div className="home-slider">
         <Slider {...sliderSettings}>
-          {projects.map((item, i) => {
+          {projects.data.projects.map((item, i) => {
               return(
                 <div className="project-slide" key={`project${i}`}>
                   <div className="bg"></div>
-                  <Link href={`/project/${item.uid}`} className="info-wrapper">
-                    <div className="project-title">{item.data.title}</div>
-                    <div className="year">{item.data.year}</div>
+                  <Link href={`/project/${item.project.uid}`} className="info-wrapper">
+                    <div className="project-title">{item.project.data.title}</div>
+                    <div className="year">{item.project.data.year}</div>
                   </Link>
-                  <PrismicNextImage field={item.data.cover_image}/>
+                  <PrismicNextImage field={item.project.data.cover_image}/>
                 </div>
               )
             })}
@@ -61,11 +61,8 @@ export async function getStaticProps({ previewData }) {
 
   const navigation = await client.getSingle("menu");
   const settings = await client.getSingle("settings");
-  const projects = await client.getAllByType("project", { 
-    orderings: {
-			field: 'my.project.date',
-			direction: 'desc',
-		}
+  const projects = await client.getSingle("home", {
+    fetchLinks: `project.title, project.year, project.cover_image`
   });
 
 

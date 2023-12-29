@@ -6,6 +6,48 @@ import type * as prismicClient from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Item in *Home → Projects*
+ */
+export interface HomeDocumentDataProjectsItem {
+	/**
+	 * Project field in *Home → Projects*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: home.projects[].project
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	project: prismic.ContentRelationshipField<"project">;
+}
+
+/**
+ * Content for Home documents
+ */
+interface HomeDocumentData {
+	/**
+	 * Projects field in *Home*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: home.projects[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	projects: prismic.GroupField<Simplify<HomeDocumentDataProjectsItem>>;
+}
+
+/**
+ * Home document from Prismic
+ *
+ * - **API ID**: `home`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomeDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
+
+/**
  * Item in *Menu → Menu Items*
  */
 export interface MenuDocumentDataMenuItemsItem {
@@ -310,7 +352,7 @@ interface WorksDocumentData {
  */
 export type WorksDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<WorksDocumentData>, "works", Lang>;
 
-export type AllDocumentTypes = MenuDocument | PageDocument | ProjectDocument | SettingsDocument | WorksDocument;
+export type AllDocumentTypes = HomeDocument | MenuDocument | PageDocument | ProjectDocument | SettingsDocument | WorksDocument;
 
 /**
  * Primary content in *Image → Primary*
@@ -556,6 +598,9 @@ declare module "@prismicio/client" {
 	
 	namespace Content {
 		export type {
+			HomeDocument,
+			HomeDocumentData,
+			HomeDocumentDataProjectsItem,
 			MenuDocument,
 			MenuDocumentData,
 			MenuDocumentDataMenuItemsItem,

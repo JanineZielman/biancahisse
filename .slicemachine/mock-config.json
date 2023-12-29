@@ -8,7 +8,10 @@
     "works": {
       "projects": {}
     },
-    "page": {}
+    "page": {},
+    "home": {
+      "projects": {}
+    }
   },
   "slices": {
     "Text": {
