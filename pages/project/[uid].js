@@ -37,7 +37,9 @@ const Project = ({ navigation, settings, page }) => {
             )
           })}
         </div>
-        <SliceZone slices={page.data.slices} components={components} />
+        <div className="project-content">
+          <SliceZone slices={page.data.slices} components={components} />
+        </div>
       </div>
     </Layout>
   );
