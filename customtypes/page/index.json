@@ -11,6 +11,33 @@
           "label": "Uid",
           "placeholder": ""
         }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "image": {
+              "type": "SharedSlice"
+            },
+            "text": {
+              "type": "SharedSlice"
+            },
+            "list": {
+              "type": "SharedSlice"
+            },
+            "texts": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

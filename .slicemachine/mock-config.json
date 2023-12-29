@@ -5,7 +5,8 @@
     "project": {
       "main_image": {}
     },
-    "works": {}
+    "works": {},
+    "page": {}
   },
   "slices": {
     "Text": {
@@ -14,6 +15,16 @@
       }
     },
     "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Texts": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "List": {
       "default": {
         "primary": {}
       }

@@ -8,6 +8,7 @@ import { Layout } from "../components/Layout";
 import Moment from 'moment';
 
 const Page = ({ navigation, settings, page }) => {
+  console.log(page)
   return (
     <Layout
       navigation={navigation}
@@ -23,8 +24,7 @@ const Page = ({ navigation, settings, page }) => {
         <meta property="og:description" content={settings.data.site_description[0].text} />
         <meta property="og:image" content={settings.data.image.url} />
       </Head>
-      {/* <h2 className="page-title">{prismicH.asText(page.data.title)}</h2> */}
-      <div className={`container page`}>
+      <div className={`container page ${page.uid}`}>
         <SliceZone slices={page.data.slices} components={components} />
       </div>
     </Layout>

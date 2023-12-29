@@ -47,7 +47,34 @@ interface MenuDocumentData {
  */
 export type MenuDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
 
-interface PageDocumentData {}
+type PageDocumentDataSlicesSlice = ImageSlice | TextSlice | ListSlice | TextsSlice
+
+/**
+ * Content for Page documents
+ */
+interface PageDocumentData {
+	/**
+	 * Title field in *Page*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * Slice Zone field in *Page*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+}
 
 /**
  * Page document from Prismic
@@ -318,6 +345,79 @@ type ImageSliceVariation = ImageSliceDefault
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
 
 /**
+ * Primary content in *List → Primary*
+ */
+export interface ListSliceDefaultPrimary {
+	/**
+	 * Title field in *List → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: list.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *List → Items*
+ */
+export interface ListSliceDefaultItem {
+	/**
+	 * Text field in *List → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: list.items[].text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * Link field in *List → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: list.items[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+	
+	/**
+	 * Year field in *List → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: list.items[].year
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	year: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for List Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: List
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSliceDefault = prismic.SharedSliceVariation<"default", Simplify<ListSliceDefaultPrimary>, Simplify<ListSliceDefaultItem>>;
+
+/**
+ * Slice variation for *List*
+ */
+type ListSliceVariation = ListSliceDefault
+
+/**
+ * List Shared Slice
+ *
+ * - **API ID**: `list`
+ * - **Description**: List
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSlice = prismic.SharedSlice<"list", ListSliceVariation>;
+
+/**
  * Primary content in *Text → Primary*
  */
 export interface TextSliceDefaultPrimary {
@@ -355,6 +455,74 @@ type TextSliceVariation = TextSliceDefault
  */
 export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
 
+/**
+ * Primary content in *Texts → Items*
+ */
+export interface TextsSliceDefaultItem {
+	/**
+	 * Title field in *Texts → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: texts.items[].title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * Subtitle field in *Texts → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: texts.items[].subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField;
+	
+	/**
+	 * Year field in *Texts → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: texts.items[].year
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	year: prismic.KeyTextField;
+	
+	/**
+	 * Link field in *Texts → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: texts.items[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Texts Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Texts
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextsSliceDefault = prismic.SharedSliceVariation<"default", Record<string, never>, Simplify<TextsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *Texts*
+ */
+type TextsSliceVariation = TextsSliceDefault
+
+/**
+ * Texts Shared Slice
+ *
+ * - **API ID**: `texts`
+ * - **Description**: Texts
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextsSlice = prismic.SharedSlice<"texts", TextsSliceVariation>;
+
 declare module "@prismicio/client" {
 	interface CreateClient {
 		(repositoryNameOrEndpoint: string, options?: prismicClient.ClientConfig): prismicClient.Client<AllDocumentTypes>;
@@ -367,6 +535,7 @@ declare module "@prismicio/client" {
 			MenuDocumentDataMenuItemsItem,
 			PageDocument,
 			PageDocumentData,
+			PageDocumentDataSlicesSlice,
 			ProjectDocument,
 			ProjectDocumentData,
 			ProjectDocumentDataMainImageItem,
@@ -380,10 +549,19 @@ declare module "@prismicio/client" {
 			ImageSliceDefaultPrimary,
 			ImageSliceVariation,
 			ImageSliceDefault,
+			ListSlice,
+			ListSliceDefaultPrimary,
+			ListSliceDefaultItem,
+			ListSliceVariation,
+			ListSliceDefault,
 			TextSlice,
 			TextSliceDefaultPrimary,
 			TextSliceVariation,
-			TextSliceDefault
+			TextSliceDefault,
+			TextsSlice,
+			TextsSliceDefaultItem,
+			TextsSliceVariation,
+			TextsSliceDefault
 		}
 	}
 }

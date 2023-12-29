@@ -1,0 +1,49 @@
+{
+  "id": "list",
+  "type": "SharedSlice",
+  "name": "List",
+  "description": "List",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "List",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "year": {
+          "type": "Text",
+          "config": {
+            "label": "Year",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

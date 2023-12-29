@@ -1,0 +1,46 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "softly",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "last",
+              "type": "Text"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "year",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "jungle",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

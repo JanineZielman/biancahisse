@@ -1,6 +1,194 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "affect"
+    "value": "silent"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "whole",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "image$53e7c470-622e-4162-b41e-00cb50c61098",
+        "name": "image",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+                "width": 4272,
+                "height": 2848
+              },
+              "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?rect=0%2C0%2C4272%2C2848&w=1080&h=720",
+              "width": 1080,
+              "height": 720,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "size": {
+              "__TYPE__": "FieldContent",
+              "value": "small-33",
+              "type": "Select"
+            },
+            "caption": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Pariatur reprehenderit voluptate in amet consectetur voluptate reprehenderit id cillum sit."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "text$64e4d8d9-cdaa-47ab-8557-088d3151e273",
+        "name": "text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Magna irure mollit reprehenderit consectetur officia dolore nulla id dolor veniam cupidatat magna laborum voluptate. Sint laboris sunt Lorem aliqua. Pariatur mollit enim labore veniam est laborum."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "list$e8ad76e2-4273-46f5-bb4a-c4394d30ec35",
+        "name": "list",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "she",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "text",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "fought",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://google.com"
+                    }
+                  }
+                ],
+                [
+                  "year",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "by",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "texts$1dbdec26-2e6d-407b-af41-ee38ee602139",
+        "name": "texts",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "title",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "south",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "subtitle",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "warm",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "year",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "slope",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://twitter.com"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }
