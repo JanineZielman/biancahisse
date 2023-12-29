@@ -80,4 +80,30 @@
     width: 100%;
     margin-left: 0%;
   }
+  .texts-page{
+    .texts-item{
+      width: 100%;
+    }
+  }
+  .about{
+    .text-section, .image-section{
+      width: 100%;
+    }
+    .text-section{
+      margin-bottom: 24px;
+    }
+    .image-section{
+      position: relative;
+      top: 0;
+      left: 0;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+  } 
+  .list{
+    margin-top: 24px;
+    width: 100%;
+  }
 }
