@@ -80,6 +80,7 @@
   .project-content{
     width: 100%;
     margin-left: 0%;
+    padding-bottom: 48px;
   }
   .texts-page{
     .texts-item{
@@ -106,5 +107,23 @@
   .list{
     margin-top: 24px;
     width: 100%;
+    h2,h3{
+      font-size: 17px;
+    }
+  }
+  .projects .project{
+    .project-title, .year{
+      font-size: 17px;
+    }
+  }
+  .text-section{
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .fixed-info-bar{
+    font-size: 20px;
+  }
+  .texts-page .texts-item h2, .texts-page .texts-item h3{
+    font-size: 17px;
   }
 }

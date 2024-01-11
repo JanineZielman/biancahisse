@@ -25,7 +25,7 @@ const Index = ({settings, navigation, projects  }) => {
         <div className="projects">
           {projects.data.projects.map((item, i) => {
             return(
-              <Link href={`/project/${item.project.uid}`} className="project" key={`project${i}`}>
+              <Link href={`/works/${item.project.uid}`} className="project" key={`project${i}`}>
                 <div className="bg"></div>
                 <div className="info-wrapper">
                   <div className="project-title">{item.project.data.title}</div>

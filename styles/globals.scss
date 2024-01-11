@@ -50,7 +50,9 @@ header.menu{
   a{
     color: black;
     text-decoration: none;
-    
+    &.active{
+      text-decoration: line-through;
+    }
   }
   h1{
     margin: 0;
@@ -148,6 +150,7 @@ header.menu{
   justify-content: space-between;
   text-transform: capitalize;
   position: fixed;
+  z-index: 9;
   bottom: 0;
   left: 0;
   padding: 14px 28px;
