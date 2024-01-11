@@ -142,33 +142,37 @@ header.menu{
   }
 }
 
+.fixed-info-bar{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  text-transform: capitalize;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 14px 28px;
+  font-size: $h3;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  &:after{
+    content: "";
+    height: 60px;
+    width: 100vw;
+    background-color: $highlight;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    bottom: 0;
+    filter: blur(10px);
+    border-radius: 25px;
+    transition: all 0.4s ease;
+  }
+}
+
 
 .project-page{
   padding-bottom: 48px;
-  .fixed-info-bar{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    text-transform: capitalize;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 14px 28px;
-    font-size: $h3;
-    &:after{
-      content: "";
-      height: 60px;
-      width: 100vw;
-      background-color: $highlight;
-      position: absolute;
-      z-index: -1;
-      left: 0px;
-      bottom: 0;
-      filter: blur(10px);
-      border-radius: 25px;
-      transition: all 0.4s ease;
-    }
-  }
   .main-image{
     display: flex;
     justify-content: space-evenly;
@@ -205,6 +209,7 @@ header.menu{
   margin-top: 48px;
   margin-bottom: 48px;
   max-width: 900px;
+  padding: 0 10px;
 }
 
 .image-section{
@@ -284,8 +289,21 @@ header.menu{
   right: 24px;
   left: auto;
   z-index: 9;
+  width: 50%;
+  height: 90%;
+  &:hover{
+    &:before{
+      opacity: 1;
+    }
+  }
   &:before{
     color: black;
+    font-size: 24px;
+    right: 0;
+    position: fixed;
+    top: 50%;
+    opacity: 0;
+    transition: all 0.4s ease;
   }
 }
 
@@ -295,8 +313,21 @@ header.menu{
   left: 24px;
   right: auto;
   z-index: 9;
+  width: 50%;
+  height: 90%;
+  &:hover{
+    &:before{
+      opacity: 1;
+    }
+  }
   &:before{
     color: black;
+    font-size: 24px;
+    left: 0;
+    position: fixed;
+    top: 50%;
+    opacity: 0;
+    transition: all 0.4s ease;
   }
 }
 
