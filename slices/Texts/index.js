@@ -7,7 +7,6 @@ import { PrismicLink, PrismicRichText } from '@prismicio/react'
  * @param { TextsProps }
  */
 const Texts = ({ slice }) => {
-  console.log(slice)
   return(
     <section className='texts-page'>
       {slice.items.map((item,i) => {

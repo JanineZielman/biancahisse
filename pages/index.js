@@ -8,7 +8,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Slider from "react-slick";
 
-const Index = ({settings, navigation, projects  }) => {
+const Index = ({settings, navigation, projects, page  }) => {
   const sliderSettings = {
     dots: false,
     arrows: true,
@@ -25,6 +25,7 @@ const Index = ({settings, navigation, projects  }) => {
     <Layout
       navigation={navigation}
       settings={settings}
+      text_color={page.data.white_text}
     >
       <Head>
         <title>{settings.data.site_title}</title>
@@ -43,7 +44,7 @@ const Index = ({settings, navigation, projects  }) => {
                     <div className="project-title">{item.project.data.title}</div>
                     <div className="year">{item.project.data.year}</div>
                   </Link>
-                  <PrismicNextImage field={item.project.data.cover_image}/>
+                  <PrismicNextImage field={item.project.data.homepage_slider_image}/>
                 </div>
               )
             })}
@@ -60,8 +61,9 @@ export async function getStaticProps({ previewData }) {
 
   const navigation = await client.getSingle("menu");
   const settings = await client.getSingle("settings");
+  const page = await client.getSingle("home");
   const projects = await client.getSingle("home", {
-    fetchLinks: `project.title, project.year, project.cover_image`
+    fetchLinks: `project.title, project.year, project.homepage_slider_image, project.white_text`
   });
 
 
@@ -69,7 +71,8 @@ export async function getStaticProps({ previewData }) {
     props: {
       navigation,
       settings,
-      projects
+      projects,
+      page
     },
   };
 }

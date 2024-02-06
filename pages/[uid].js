@@ -8,7 +8,6 @@ import { Layout } from "../components/Layout";
 import Moment from 'moment';
 
 const Page = ({ navigation, settings, page }) => {
-  console.log(page)
   return (
     <Layout
       navigation={navigation}

@@ -7,7 +7,6 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react'
  * @param { ListProps }
  */
 const List = ({ slice }) => {
-  console.log(slice)
   return(
     <section className='list'>
       <h2>{slice.primary.title}</h2>

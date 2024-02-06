@@ -25,6 +25,18 @@ export interface HomeDocumentDataProjectsItem {
  */
 interface HomeDocumentData {
 	/**
+	 * White Text field in *Home*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: home.white_text
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	white_text: prismic.BooleanField;
+	
+	/**
 	 * Projects field in *Home*
 	 *
 	 * - **Field Type**: Group
@@ -227,6 +239,17 @@ interface ProjectDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	main_image: prismic.GroupField<Simplify<ProjectDocumentDataMainImageItem>>;
+	
+	/**
+	 * Homepage Slider Image field in *Project*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.homepage_slider_image
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	homepage_slider_image: prismic.ImageField<never>;
 	
 	/**
 	 * Slice Zone field in *Project*

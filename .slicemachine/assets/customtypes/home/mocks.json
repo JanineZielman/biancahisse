@@ -1,7 +1,11 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "source"
+    "value": "somebody"
+  },
+  "white_text": {
+    "__TYPE__": "BooleanContent",
+    "value": true
   },
   "projects": {
     "__TYPE__": "GroupContentType",

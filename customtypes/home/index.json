@@ -12,6 +12,15 @@
           "placeholder": ""
         }
       },
+      "white_text": {
+        "type": "Boolean",
+        "config": {
+          "label": "White Text",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "projects": {
         "type": "Group",
         "config": {

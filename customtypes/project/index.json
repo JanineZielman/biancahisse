@@ -78,6 +78,16 @@
           }
         }
       },
+      "homepage_slider_image": {
+        "type": "Image",
+        "config": {
+          "label": "Homepage Slider Image",
+          "constraint": {
+            "width": 1920
+          },
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
