@@ -38,6 +38,14 @@ main{
   min-height: 100vh;
 }
 
+.white-text{
+  color: white;
+}
+
+p a{
+  color: $highlight;
+}
+
 header.menu{
   display: flex;
   justify-content: space-between;
@@ -52,6 +60,11 @@ header.menu{
     text-decoration: none;
     &.active{
       text-decoration: line-through;
+    }
+  }
+  &.white-text{
+    a{
+      color: white;
     }
   }
   h1{
@@ -174,7 +187,6 @@ header.menu{
     transition: all 0.4s ease;
   }
 }
-
 
 .project-page{
   padding-bottom: 48px;

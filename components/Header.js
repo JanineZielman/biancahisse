@@ -4,11 +4,11 @@ import Link from "next/link";
 
 import { useRouter } from "next/router";
 
-export const Header = ({ navigation, settings, background_color }) => {
+export const Header = ({ navigation, settings, background_color, text_color }) => {
   const router = useRouter()
 
   return (
-    <header className="menu" style={{'background': `${router.asPath != '/' ? `linear-gradient(180deg, ${background_color} 30%, rgba(0,0,0,0) 100%)` : 'transparent'}`}}>
+    <header className={`menu ${text_color && 'white-text'}`} style={{'background': `${router.asPath != '/' ? `linear-gradient(180deg, ${background_color} 30%, rgba(0,0,0,0) 100%)` : 'transparent'}`}}>
       <Link href="/"><h1>{settings.data.site_title}</h1></Link>
       <div className="menu-items">
         {navigation.data.menu_items.map((item, i) => {

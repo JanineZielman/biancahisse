@@ -5,7 +5,8 @@ export const Layout = ({
   navigation,
   settings,
   children,
-  background_color
+  background_color,
+  text_color
 }) => {
   return (
     <>
@@ -14,6 +15,7 @@ export const Layout = ({
         navigation={navigation}
         settings={settings}
         background_color={background_color ? background_color : settings.data.background_color}
+        text_color={text_color}
       />
       <main style={{'backgroundColor': settings.data.background_color}}>
         {children}

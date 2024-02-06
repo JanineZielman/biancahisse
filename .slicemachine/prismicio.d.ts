@@ -195,6 +195,18 @@ interface ProjectDocumentData {
 	background_color: prismic.ColorField;
 	
 	/**
+	 * White Text field in *Project*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: project.white_text
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	white_text: prismic.BooleanField;
+	
+	/**
 	 * Cover Image field in *Project*
 	 *
 	 * - **Field Type**: Image

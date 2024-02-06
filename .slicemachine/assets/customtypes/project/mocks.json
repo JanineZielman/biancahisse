@@ -1,38 +1,42 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "dress"
+    "value": "slowly"
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "blow",
+    "value": "adult",
     "type": "Text"
   },
   "year": {
     "__TYPE__": "FieldContent",
-    "value": "clear",
+    "value": "some",
     "type": "Text"
   },
   "date": {
     "__TYPE__": "FieldContent",
     "type": "Date",
-    "value": "2019-03-16"
+    "value": "2012-05-28"
   },
   "background_color": {
     "__TYPE__": "FieldContent",
-    "value": "#c7eb76",
+    "value": "#1b9a20",
     "type": "Color"
+  },
+  "white_text": {
+    "__TYPE__": "BooleanContent",
+    "value": true
   },
   "cover_image": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-      "width": 5616,
-      "height": 3744
+      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+      "width": 3456,
+      "height": 3456
     },
-    "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?rect=0%2C0%2C5616%2C3744&w=1620&h=1080",
-    "width": 1620,
+    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?rect=0%2C0%2C3456%2C3456&w=1080&h=1080",
+    "width": 1080,
     "height": 1080,
     "edit": {
       "zoom": 1,
@@ -56,13 +60,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
-                "width": 3810,
-                "height": 5715
+                "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+                "width": 2545,
+                "height": 2545
               },
-              "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?rect=0%2C0%2C3810%2C5715&w=1920&h=2880",
+              "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?rect=0%2C0%2C2545%2C2545&w=1920&h=1920",
               "width": 1920,
-              "height": 2880,
+              "height": 1920,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -82,7 +86,7 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "image$0264a31c-0710-41ed-a9fa-325c4a5bd745",
+        "key": "image$49d02921-ae37-4e9b-8d0c-0a00220d7a03",
         "name": "image",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -92,12 +96,12 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
-                "width": 4000,
-                "height": 4000
+                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+                "width": 3500,
+                "height": 2338
               },
-              "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?rect=0%2C0%2C4000%2C4000&w=1080&h=1080",
-              "width": 1080,
+              "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?rect=0%2C0%2C3500%2C2338&w=1617&h=1080",
+              "width": 1617,
               "height": 1080,
               "edit": {
                 "zoom": 1,
@@ -120,7 +124,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Eiusmod consectetur eu fugiat est ex aliqua pariatur laborum consequat ullamco ad eiusmod sint. Sint in sunt nulla occaecat amet est ullamco culpa enim. Est est reprehenderit ipsum magna."
+                    "text": "Eiusmod et ea minim nostrud."
                   }
                 }
               ]
@@ -135,7 +139,7 @@
         }
       },
       {
-        "key": "text$a0dea719-bd82-45b9-af1e-ef9ba71b2718",
+        "key": "text$32f1dd8c-64ba-4e40-be18-c4282a2334e0",
         "name": "text",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -147,7 +151,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Consectetur velit id velit ex tempor elit est elit eiusmod et."
+                    "text": "Qui est aute adipisicing. Id consequat reprehenderit voluptate tempor nostrud proident consectetur commodo reprehenderit proident elit. Pariatur anim nulla nisi deserunt ullamco reprehenderit sunt veniam reprehenderit consequat."
                   }
                 }
               ]

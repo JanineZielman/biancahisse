@@ -40,6 +40,15 @@
           "placeholder": ""
         }
       },
+      "white_text": {
+        "type": "Boolean",
+        "config": {
+          "label": "White Text",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
+        }
+      },
       "cover_image": {
         "type": "Image",
         "config": {
