@@ -220,13 +220,18 @@ header.menu{
 .project-content{
   width: 90%;
   margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .text-section{
   margin-top: 48px;
   margin-bottom: 48px;
-  max-width: 900px;
+  width: 100%;
   padding: 0 10px;
+  p{
+    max-width: 900px;
+  }
 }
 
 .image-section{
@@ -235,24 +240,24 @@ header.menu{
   padding: 10px 14px;
   img{
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: bottom;
+    height: 100%;
+    // object-fit: contain;
+    // object-position: center;
   }
   p{
     margin: 5px 0 0 0;
   }
   &.small-33{
     width: 33.33%;
-    img{
-      aspect-ratio: 4/5;
-    }
+    // img{
+    //   aspect-ratio: 4/5;
+    // }
   }
   &.medium-50{
     width: 50%;
-    img{
-      aspect-ratio: 16/9;
-    }
+    // img{
+    //   aspect-ratio: 16/9;
+    // }
   }
   &.large-100{
     width: 100%;
